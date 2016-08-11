@@ -31,10 +31,13 @@ The easiest way to install spf13-vim is to use our [automatic installer](https:/
 
 *Requires Git 1.7+ and Vim 7.3+*
 
+官方是运行下面的命令
 ```bash
 
     curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 ```
+
+因为仓库被我修改过设置，所以我们不用官方命令，而是直接将bootstrap.sh脚本复制到家目录运行即可。至于这个Git仓库，其实不需要下载，bootstrap.sh会解决所有事情。
 
 If you have a bash-compatible shell you can run the script directly:
 ```bash
