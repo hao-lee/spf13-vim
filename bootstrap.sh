@@ -206,7 +206,8 @@ setup_vundle    "$APP_PATH/.vimrc.bundles.default"
 mkdir -p ~/.vim/colors
 curl https://raw.githubusercontent.com/kerneldeveloper/molokai/master/colors/molokai.vim -L > ~/.vim/colors/molokai.vim
 echo colorscheme molokai  >> ~/.vimrc.local
-#
+#Set leader to standard
+echo "let g:spf13_leader='\'" >>  ~/.vimrc.before.local
 
 msg             "\nThanks for installing $app_name."
 msg             "© `date +%Y` http://vim.spf13.com/"
