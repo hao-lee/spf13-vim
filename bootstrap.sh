@@ -204,8 +204,14 @@ setup_vundle    "$APP_PATH/.vimrc.bundles.default"
 
 #Set my own color scheme
 mkdir -p ~/.vim/colors
-curl https://raw.githubusercontent.com/kerneldeveloper/molokai/master/colors/molokai.vim -L > ~/.vim/colors/molokai.vim
-echo colorscheme molokai  >> ~/.vimrc.local
+curl https://raw.githubusercontent.com/hao-lee/molokai/master/colors/molokai.vim -L > ~/.vim/colors/molokai.vim
+echo "colorscheme molokai"  >> ~/.vimrc.local
+#Set YCM
+echo "let g:spf13_bundle_groups=['general', 'programming', 'misc', 'c', 'youcompleteme']" >>  ~/.vimrc.before.local
+#Load ycm_core in python2
+echo "let g:ycm_server_python_interpreter = '/usr/bin/python'"  >> ~/.vimrc.local
+#Load .ycm_extra_conf.py under ~/* silently
+echo "let g:ycm_extra_conf_globlist = ['~/*']" >> ~/.vimrc.local
 #Set leader to standard
 echo "let g:spf13_leader='\'" >>  ~/.vimrc.before.local
 
